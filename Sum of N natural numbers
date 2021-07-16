@@ -1,0 +1,23 @@
+//Sum of n natural numbers using recursion
+import java.util.*;
+
+class TestSum
+{
+    int sum(int number)
+    {
+        if(number==1)
+        {
+            return 1;           
+        }                                      //1+2+3+4  +5
+        else{                             
+            return sum(number-1)+number;      //sum(4)+5 = sum(5)
+        }                                     //sum(n-1)+n = sum(n)
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    TestSum s = new TestSum();
+		System.out.println(s.sum(5));
+	}
+}
